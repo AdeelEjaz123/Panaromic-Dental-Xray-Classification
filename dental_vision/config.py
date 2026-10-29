@@ -10,12 +10,14 @@ DENTAL_CLASSES: List[str] = [
     "Filling",
     "Implant",
     "Malaligned",
+    "Mandibular Canal",
     "Missing teeth",
     "Periapical lesion",
     "Retained root",
     "Root Canal Treatment",
     "Root Piece",
     "impacted tooth",
+    "Maxillary sinus",
     "Bone Loss",
     "Supra Eruption",
     "abutment",
@@ -51,10 +53,12 @@ CLINICAL_CATEGORIES: Dict[str, List[str]] = {
         "orthodontic brackets",
         "wire",
     ],
-    "Anatomy & Development": [
+    "Anatomy & Landmarks": [
         "Tooth",
         "Missing teeth",
         "impacted tooth",
+        "Mandibular Canal",
+        "Maxillary sinus",
     ],
 }
 

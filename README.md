@@ -15,6 +15,7 @@
 - [Executive Overview](#-executive-overview)
 - [Key Features](#-key-features)
 - [Clinical Taxonomy & Supported Classes](#-clinical-taxonomy--supported-classes)
+- [Dataset & Source Attribution](#-dataset--source-attribution)
 - [Model Architecture & Benchmark](#-model-architecture--benchmark)
 - [Project Architecture](#-project-architecture)
 - [Installation](#-installation)
@@ -52,15 +53,40 @@ Dental panoramic radiographs (OPGs) are foundational for clinical dentistry, yet
 
 ## 🩺 Clinical Taxonomy & Supported Classes
 
-The system detects **19+ dental conditions and structures**, organized into 5 clinical specialties:
+The system detects **dental pathologies, restorations, and anatomical landmarks**, organized into 5 clinical specialties:
 
 | Clinical Discipline | Detected Findings / Structures | Clinical Purpose |
 | :--- | :--- | :--- |
-| **Pathology & Lesions** | `Caries`, `Periapical lesion`, `Bone Loss` | Early detection of decay, apical periodontitis, and periodontal disease. |
-| **Restorative & Prosthodontics** | `Crown`, `Filling`, `Implant`, `abutment`, `post - core` | Assessment of existing restorations and implant stability. |
-| **Endodontics & Surgery** | `Root Canal Treatment`, `Retained root`, `Root Piece` | Verification of obturation quality and retained root fragments. |
-| **Orthodontics & Alignment** | `Malaligned`, `Supra Eruption`, `metal band`, `orthodontic brackets`, `wire` | Malocclusion tracking and orthodontic appliance monitoring. |
-| **Anatomy & Development** | `Tooth`, `Missing teeth`, `impacted tooth` | Full arch tooth numbering, impaction screening (e.g., 3rd molars). |
+| **Pathology & Lesions** | `Caries`, `Periapical lesion`, `Bone Loss` | Early detection of decay, apical periodontitis, and alveolar bone resorption. |
+| **Restorative & Prosthodontics** | `Crown`, `Filling`, `Implant`, `abutment`, `post - core` | Evaluation of existing restorations, prostheses, and implant placement. |
+| **Endodontics & Surgery** | `Root Canal Treatment`, `Retained root`, `Root Piece` | Verification of endodontic obturation quality and retained root fragments. |
+| **Orthodontics & Alignment** | `Malaligned`, `Supra Eruption`, `metal band`, `orthodontic brackets`, `wire` | Malocclusion screening and orthodontic hardware tracking. |
+| **Anatomy & Landmarks** | `Tooth`, `Missing teeth`, `impacted tooth`, `Mandibular Canal`, `Maxillary sinus` | Anatomic landmark localization, tooth numbering, and surgical risk mapping. |
+
+---
+
+## 📚 Dataset & Source Attribution
+
+This project is trained and evaluated using the publicly accessible **[Dental X-Ray Panoramic Dataset](https://www.kaggle.com/datasets/lokisilvres/dental-disease-panoramic-detection-dataset)** curated by **Loki Silvres** on Kaggle.
+
+- **Dataset Source:** [Kaggle: Dental Disease Panoramic Detection Dataset](https://www.kaggle.com/datasets/lokisilvres/dental-disease-panoramic-detection-dataset)
+- **Dataset Usability:** `10.00 / 10.00`
+- **License:** [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0) (Permissive commercial and research use with attribution)
+- **Annotation Format:** YOLO Object Detection & COCO Segmentation
+
+### Downloading & Setting Up the Dataset
+
+To reproduce training or fine-tune on the original dataset, download it via the Kaggle CLI:
+
+```bash
+# 1. Install Kaggle CLI and download dataset
+pip install kaggle
+kaggle datasets download -d lokisilvres/dental-disease-panoramic-detection-dataset
+
+# 2. Extract into datasets directory
+mkdir -p datasets/dental_xray
+unzip dental-disease-panoramic-detection-dataset.zip -d datasets/dental_xray/
+```
 
 ---
 
@@ -291,7 +317,8 @@ An interactive, self-contained Jupyter notebook is provided in [`notebooks/01_de
 
 ---
 
-## 📄 License & Contributing
+## 📄 License & Attribution
 
-- **License:** Distributed under the [MIT License](LICENSE).
+- **Code License:** Distributed under the [MIT License](LICENSE).
+- **Dataset License:** The underlying [Dental X-Ray Panoramic Dataset](https://www.kaggle.com/datasets/lokisilvres/dental-disease-panoramic-detection-dataset) is licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
 - **Contributions:** We welcome PRs! Please check out [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on code standards and tests.

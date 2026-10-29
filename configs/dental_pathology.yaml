@@ -1,5 +1,7 @@
 # ==============================================================================
 # Dental Vision AI - YOLO Dataset Configuration
+# Dataset: Dental X-Ray Panoramic Dataset (Kaggle: lokisilvres/dental-disease-panoramic-detection-dataset)
+# License: Apache 2.0
 # ==============================================================================
 # Update 'path' to the root directory of your dental radiograph dataset
 path: ./datasets/dental_xray
