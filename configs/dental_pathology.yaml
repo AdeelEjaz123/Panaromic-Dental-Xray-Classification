@@ -1,0 +1,35 @@
+# ==============================================================================
+# Dental Vision AI - YOLO Dataset Configuration
+# ==============================================================================
+# Update 'path' to the root directory of your dental radiograph dataset
+path: ./datasets/dental_xray
+
+# Relative paths to split directories
+train: train/images
+val: valid/images
+test: test/images
+
+# Number of classes
+nc: 19
+
+# Class names mapping
+names:
+  0: Tooth
+  1: Caries
+  2: Crown
+  3: Filling
+  4: Implant
+  5: Malaligned
+  6: Missing teeth
+  7: Periapical lesion
+  8: Retained root
+  9: Root Canal Treatment
+  10: Root Piece
+  11: impacted tooth
+  12: Bone Loss
+  13: Supra Eruption
+  14: abutment
+  15: metal band
+  16: orthodontic brackets
+  17: post - core
+  18: wire

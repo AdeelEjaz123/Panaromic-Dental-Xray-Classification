@@ -1,0 +1,33 @@
+# ==============================================================================
+# Hyperparameter Profile for Panoramic Radiograph YOLOv8 Fine-Tuning
+# ==============================================================================
+# Optimized for small-to-medium medical radiography datasets with high visual density
+
+# Core Architecture & Training
+imgsz: 640
+batch: 16
+epochs: 50
+patience: 15
+optimizer: auto
+lr0: 0.001
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Regularization
+dropout: 0.1
+
+# Augmentations (Carefully calibrated for dental radiography structures)
+mosaic: 1.0          # Stitches 4 images to create diverse contextual arrangements
+mixup: 0.05          # Subtle blending to prevent over-reliance on local textures
+degrees: 10.0        # Minor head tilt / angular variance
+translate: 0.1       # 10% translation shifts
+scale: 0.5           # Patient zoom & skull size variance
+fliplr: 0.5          # Horizontal mirroring (anatomically valid for teeth symmetry)
+flipud: 0.0          # Vertical flipping is anatomically invalid for jaws
+hsv_h: 0.015         # Subtle hue adjustments
+hsv_s: 0.7           # Saturation variance
+hsv_v: 0.4           # Contrast / brightness variance across different X-ray machines

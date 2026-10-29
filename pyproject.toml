@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dental-vision"
+version = "0.1.0"
+description = "Deep Learning Suite for Panoramic Dental X-ray Tooth Localization & Multi-Condition Pathology Detection"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Dental Vision Contributors", email = "contact@dentalvision.org" }
+]
+keywords = [
+    "deep-learning",
+    "computer-vision",
+    "yolov8",
+    "dental-xray",
+    "pathology-detection",
+    "medical-imaging",
+    "dentistry"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Medical Science Apps."
+]
+dependencies = [
+    "ultralytics>=8.1.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "opencv-python>=4.8.0",
+    "numpy>=1.23.0",
+    "pandas>=1.5.0",
+    "matplotlib>=3.7.0",
+    "Pillow>=9.5.0",
+    "PyYAML>=6.0"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dental-vision/dental-xray-pathology"
+"Bug Tracker" = "https://github.com/dental-vision/dental-xray-pathology/issues"
+
+[project.scripts]
+dental-vision = "main:main"

@@ -1,0 +1,87 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Model Weights & Results
+# Allow tracked production weights and benchmark run results
+!weights/best.pt
+!run_1-2/
+!run_1-2/**
+
+# Ignore arbitrary local weights and caches
+*.pth
+*.onnx
+*.engine
+*.tflite
+*.torchscript
+runs/
+dental_yolo/
+dental_xray_subset/
+nano_run_1*/
+
+# Datasets and raw media
+datasets/
+dental_dataset/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+/data/
+single_labels/
+output/
+predictions/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*-checkpoint.ipynb
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Testing & Coverage
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
